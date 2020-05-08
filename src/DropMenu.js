@@ -1,7 +1,6 @@
 import React from 'react';
-import { Menu } from 'antd';
+import { Menu, message } from 'antd';
 import { RightOutlined } from '@ant-design/icons';
-import { message } from 'antd';
 
 function handleMenuClick(e) {
   message.info('Click on menu item.');

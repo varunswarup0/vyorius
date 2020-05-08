@@ -1,9 +1,8 @@
 import React from 'react';
-import { Dropdown, Button } from 'antd';
+import { Dropdown, Button, Layout } from 'antd';
 import { DownOutlined, RocketFilled } from '@ant-design/icons';
 import { DropMenu } from './DropMenu';
 import { SideMenu } from './SideMenu';
-import { Layout } from 'antd';
 const { Sider } = Layout;
 
 export const HamBurger = () => (

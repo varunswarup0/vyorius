@@ -1,17 +1,19 @@
-import React from 'react';
-import 'antd/dist/antd.css';
-import { Layout } from 'antd';
-import { HamBurger } from './HamBurger';
-import { HotDog } from './HotDog';
-import './App.css';
+import React, { Component } from 'react';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
+import Home from './Home';
 
-function App() {
-  return (
-    <Layout className='layout'>
-      <HamBurger />
-      <HotDog />
-    </Layout>
-  );
+class App extends Component {
+  render() {
+    return (
+      <div className='App'>
+        <Router>
+          <div>
+            <Route exact path='/' component={Home} />
+          </div>
+        </Router>
+      </div>
+    );
+  }
 }
 
 export default App;
