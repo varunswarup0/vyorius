@@ -2,8 +2,6 @@
   height: 38px;
   font-weight: 700;
   background: #fff;
-  /* margin: 16px; */
-  /* width: 2px; */
   background-color: #fff;
   font-size: 10px;
 }
@@ -46,9 +44,6 @@
 
 .user {
   background-color: #fff;
-  /* width: 5px; */
-  /* height: 5px; */
-  /* position: absolute; */
   display: flex;
   text-align: center;
   justify-content: center;

@@ -9,17 +9,11 @@ export const TitleBar = () => (
     className='site-layout-sub-header-background' // style={{ padding: 0 }}
   >
     <div className='selected-menu-item'>
-      <>&nbsp; MAINTENNACE SUMMARY</>
-      &nbsp;&nbsp;
-      <>
-        <Input className='search' placeholder='Search...' />
-        &nbsp;&nbsp; &nbsp;&nbsp;
-        <UserOutlined />
-        &nbsp;&nbsp;
-        <BellFilled />
-        &nbsp;&nbsp;
-        <SettingFilled />
-      </>
+      MAINTENNACE SUMMARY
+      <Input className='search' placeholder='Search...' />
+      <UserOutlined />
+      <BellFilled />
+      <SettingFilled />
     </div>
   </Header>
 );

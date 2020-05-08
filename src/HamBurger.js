@@ -19,7 +19,7 @@ export const HamBurger = () => (
   >
     <div className='logo'>
       <img src={require('./images/logo.png')} alt='logo' />
-      &nbsp; VYORIUS
+      VYORIUS
     </div>
     <div className='user'>
       <img src={require('./images/user.png')} alt='user' />

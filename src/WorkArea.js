@@ -1,5 +1,6 @@
 import React from 'react';
 import { Layout } from 'antd';
+import Map from './Map';
 const { Content } = Layout;
 export const WorkArea = () => (
   <Content
@@ -15,6 +16,12 @@ export const WorkArea = () => (
       }}
     >
       content
+      <Map
+        // google={this.props.google}
+        center={{ lat: 18.5204, lng: 73.8567 }}
+        height='300px'
+        zoom={15}
+      />
     </div>
   </Content>
 );
