@@ -3,8 +3,10 @@ import { Dropdown, Button, Layout } from 'antd';
 import { DownOutlined, RocketFilled } from '@ant-design/icons';
 import { DropMenu } from './DropMenu';
 import { SideMenu } from './SideMenu';
-const { Sider } = Layout;
+import { Avatar } from 'antd';
+import { UserOutlined } from '@ant-design/icons';
 
+const { Sider } = Layout;
 export const HamBurger = () => (
   <Sider
     breakpoint='lg'
@@ -21,7 +23,8 @@ export const HamBurger = () => (
       VYORIUS
     </div>
     <div className='user'>
-      <img src={require('./images/user.png')} alt='user' />
+      {/* <img src={require('./images/user.png')} alt='user' /> */}
+      <Avatar size={64} icon={<UserOutlined />} />
     </div>
     <div className='user'>MICHEL</div>
     <br />
