@@ -7,6 +7,8 @@ import {
   Marker,
 } from 'react-google-maps';
 import Geocode from 'react-geocode';
+import Form from 'antd/lib/form/Form';
+import FormItem from 'antd/lib/form/FormItem';
 Geocode.setApiKey('AIzaSyDAH3kChZgwPPVQLtbVDi5hIpj78xMD8DE');
 Geocode.enableDebug();
 class Map extends React.Component {
@@ -166,51 +168,49 @@ class Map extends React.Component {
     if (this.props.center.lat !== undefined) {
       map = (
         <div>
-          <div>
-            <div className='form-group'>
-              <label htmlFor=''>City</label>
-              <input
-                type='text'
-                name='city'
-                className='form-control'
-                onChange={this.onChange}
-                readOnly='readOnly'
-                value={this.state.city}
-              />
-            </div>
-            <div className='form-group'>
-              <label htmlFor=''>Area</label>
-              <input
-                type='text'
-                name='area'
-                className='form-control'
-                onChange={this.onChange}
-                readOnly='readOnly'
-                value={this.state.area}
-              />
-            </div>
-            <div className='form-group'>
-              <label htmlFor=''>State</label>
-              <input
-                type='text'
-                name='state'
-                className='form-control'
-                onChange={this.onChange}
-                readOnly='readOnly'
-                value={this.state.state}
-              />
-            </div>
-            <div className='form-group'>
-              <label htmlFor=''>Address</label>
-              <input
-                type='text'
-                name='address'
-                className='form-control'
-                onChange={this.onChange}
-                readOnly='readOnly'
-                value={this.state.address}
-              />
-            </div>
+          <div className='form-group'>
+            <Form size={'large'}>
+              <FormItem label='City'>
+                <input
+                  type='text'
+                  name='city'
+                  className='form-control'
+                  onChange={this.onChange}
+                  readOnly='readOnly'
+                  value={this.state.city}
+                />
+              </FormItem>
+              <FormItem label='Area'>
+                <input
+                  type='text'
+                  name='area'
+                  className='form-control'
+                  onChange={this.onChange}
+                  readOnly='readOnly'
+                  value={this.state.area}
+                />
+              </FormItem>
+              <FormItem label='State'>
+                <input
+                  type='text'
+                  name='state'
+                  className='form-control'
+                  onChange={this.onChange}
+                  readOnly='readOnly'
+                  value={this.state.state}
+                />
+              </FormItem>
+              <FormItem label='Address'>
+                <input
+                  type='text'
+                  name='address'
+                  className='form-control'
+                  onChange={this.onChange}
+                  readOnly='readOnly'
+                  value={this.state.address}
+                />
+              </FormItem>
+            </Form>
           </div>
           <AsyncMap
             googleMapURL='https://maps.googleapis.com/maps/api/js?key=AIzaSyDAH3kChZgwPPVQLtbVDi5hIpj78xMD8DE&libraries=places'

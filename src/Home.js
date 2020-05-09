@@ -12,6 +12,7 @@ class Home extends Component {
         <HamBurger />
         <HotDog />
       </Layout>
+      // <GetGeoLoction />
     );
   }
 }

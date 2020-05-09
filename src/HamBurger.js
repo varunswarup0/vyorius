@@ -1,5 +1,5 @@
 import React from 'react';
-import { Dropdown, Button, Layout } from 'antd';
+import { Dropdown, Button, Layout, Space } from 'antd';
 import { DownOutlined, RocketFilled } from '@ant-design/icons';
 import { DropMenu } from './DropMenu';
 import { SideMenu } from './SideMenu';
@@ -19,11 +19,13 @@ export const HamBurger = () => (
     }}
   >
     <div className='logo'>
-      <img src={require('./images/logo.png')} alt='logo' />
-      VYORIUS
+      <Space>
+        {' '}
+        <img src={require('./images/logo.png')} alt='logo' />
+        VYORIUS
+      </Space>
     </div>
     <div className='user'>
-      {/* <img src={require('./images/user.png')} alt='user' /> */}
       <Avatar size={64} icon={<UserOutlined />} />
     </div>
     <div className='user'>MICHEL</div>

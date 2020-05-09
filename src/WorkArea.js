@@ -1,6 +1,7 @@
 import React from 'react';
-import { Layout } from 'antd';
-import Map from './Map';
+import { Layout, Button, Space } from 'antd';
+// import Map from './Map';
+import GetGeoLoction from './GetGeoLocation';
 const { Content } = Layout;
 export const WorkArea = () => (
   <Content
@@ -15,13 +16,13 @@ export const WorkArea = () => (
         minHeight: 360,
       }}
     >
-      content
-      <Map
+      <GetGeoLoction />
+      {/* <Map
         // google={this.props.google}
         center={{ lat: 18.5204, lng: 73.8567 }}
         height='300px'
         zoom={15}
-      />
+      /> */}
     </div>
   </Content>
 );
