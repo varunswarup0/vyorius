@@ -1,28 +1,24 @@
 import React from 'react';
-import { Layout, Button, Space } from 'antd';
-// import Map from './Map';
-import GetGeoLoction from './GetGeoLocation';
+import { Layout } from 'antd';
+import { ChoiceToUser } from './ChoiceToUser';
+
+// import { Preferences } from './Preferences';
+// import { ConfirmationPage } from './ConfirmationPage';
+// import { LiveTracking } from './LiveTracking';
+// import { QRcode } from './QRcode';
+// import { HistoryTracker } from './HistoryTracker';
+// import GetGeoLoction from './GetGeoLocation';
+// import { CardTable } from './CardTable';
+
 const { Content } = Layout;
+
 export const WorkArea = () => (
   <Content
     style={{
       margin: '24px 16px 0',
+      textAlign: 'center',
     }}
   >
-    <div
-      className='site-layout-background'
-      style={{
-        padding: 24,
-        minHeight: 360,
-      }}
-    >
-      <GetGeoLoction />
-      {/* <Map
-        // google={this.props.google}
-        center={{ lat: 18.5204, lng: 73.8567 }}
-        height='300px'
-        zoom={15}
-      /> */}
-    </div>
+    <ChoiceToUser></ChoiceToUser>
   </Content>
 );

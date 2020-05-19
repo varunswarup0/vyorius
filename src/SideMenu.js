@@ -6,7 +6,7 @@ export class SideMenu extends React.Component {
     super(props);
     this.state = {
       options: [
-        'MAINTANCE SUMMARY',
+        'HOME',
         'FLIGHT LOGS',
         'DAILY REPORT',
         'MAINTANCE REPORT',
@@ -28,7 +28,7 @@ export class SideMenu extends React.Component {
         }}
       >
         <Menu.Item className='menu-item' key='1' icon={<RightOutlined />}>
-          MAINTANCE SUMMARY
+          HOME
         </Menu.Item>
         <Menu.Item className='menu-item' key='2' icon={<RightOutlined />}>
           FLIGHT LOGS

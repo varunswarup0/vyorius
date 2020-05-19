@@ -1,6 +1,10 @@
 import React from 'react';
 import './App.css';
-import { Button } from 'antd';
+import { Button, Input, Space, Select } from 'antd';
+import { Typography } from 'antd';
+
+const { Option } = Select;
+const { Title } = Typography;
 
 class App extends React.Component {
   constructor(props) {
@@ -72,22 +76,46 @@ class App extends React.Component {
     return (
       <center className='App'>
         {/* <h2>React GeolocationExample</h2> */}
-        <Button type='primary' onClick={this.getLocation}>
-          <b>SET DELIVERY LOCATION</b>
-        </Button>
+        <Space direction='vertical' value={'large'}>
+          <Button type='primary' onClick={this.getLocation}>
+            <Title level={4} style={{ placeItems: 'center' }}>
+              SET DELIVERY LOCATION
+            </Title>
+          </Button>
+          {/* <button onClick={this.getLocation}>Get Coordinates</button> */}
+          {/* <h4>HTML5 Coordinates</h4> */}
+          {/* <p>Latitude: {this.state.latitude}</p> */}
+          {/* <p>Longitude: {this.state.longitude}</p> */}
+          {/* <h4>Google Maps Reverse Geocoding</h4> */}
+          {/* <p>Address: {this.state.userAddress}</p> */}
+          {/* <Input placeholder={this.state.userAddress} /> */}
 
-        {/* <button onClick={this.getLocation}>Get Coordinates</button> */}
-        <h4>HTML5 Coordinates</h4>
-        <p>Latitude: {this.state.latitude}</p>
-        <p>Longitude: {this.state.longitude}</p>
-        <h4>Google Maps Reverse Geocoding</h4>
-        <p>Address: {this.state.userAddress}</p>
-        {this.state.latitude && this.state.longitude ? (
-          <img
-            src={`https://maps.googleapis.com/maps/api/staticmap?center=${this.state.latitude},${this.state.longitude}&zoom=14&size=400x300&sensor=false&markers=color:red%7c${this.state.latitude},${this.state.longitude}&key=AIzaSyAvKRWqZNDF3e0VOz8YPiZN77QvjcwymP0`}
-            alt=''
-          />
-        ) : null}
+          <br />
+          <Input.Group compact size='middle'>
+            <Select defaultValue='Home'>
+              <Option value='Home'>Home</Option>
+              <Option value='Company'>Company</Option>
+            </Select>
+            <Input
+              style={{ width: '70%' }}
+              defaultValue='Flat No: 199, Pocket-A, Rosewood Appt., Sector 13, Dwarka, New Delhi'
+            >
+              {this.state.userAddress}
+            </Input>
+          </Input.Group>
+          <br />
+          {this.state.latitude && this.state.longitude ? (
+            <img
+              src={`https://maps.googleapis.com/maps/api/staticmap?center=${this.state.latitude},${this.state.longitude}&zoom=14&size=400x300&sensor=false&markers=color:red%7c${this.state.latitude},${this.state.longitude}&key=AIzaSyAvKRWqZNDF3e0VOz8YPiZN77QvjcwymP0`}
+              alt=''
+            />
+          ) : (
+            <img
+              src={require('./images/GetGeoLocation.png')}
+              alt='GetGeoLocation'
+            />
+          )}
+        </Space>
       </center>
     );
   }
